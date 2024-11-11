@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#FAFAFA] text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-4 bg-white shadow-md">
+    <div class="text-xl font-bold text-red-500">CREATIVES FOR YOU</div>
+    
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-6 text-gray-600">
+      <li><a href="#" class="hover:text-gray-900">Home</a></li>
+      <li><a href="#" class="hover:text-gray-900">About Us</a></li>
+      <li><a href="#" class="hover:text-gray-900">Upskill</a></li>
+      <li><a href="#" class="hover:text-gray-900">Contact Us</a></li>
+    </ul>
+
+    <!-- Desktop Buttons -->
+    <div class="hidden md:flex space-x-4">
+      <button class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Register Interest</button>
+      <button class="p-2 rounded-full border border-gray-300">
+        <span class="sr-only">Toggle Dark Mode</span> 🌙
+      </button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden p-2 rounded focus:outline-none" onclick="toggleMobileMenu()">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden flex-col space-y-4 p-4 md:hidden bg-white shadow-md">
+    <ul class="space-y-2 text-gray-600">
+      <li><a href="#" class="block hover:text-gray-900">Home</a></li>
+      <li><a href="#" class="block hover:text-gray-900">About Us</a></li>
+      <li><a href="#" class="block hover:text-gray-900">Upskill</a></li>
+      <li><a href="#" class="block hover:text-gray-900">Contact Us</a></li>
+    </ul>
+    <button class="w-full px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600">Register Interest</button>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
